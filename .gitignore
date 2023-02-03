@@ -575,3 +575,5 @@ Cargo.lock
 
 # it's not good to accept binary files updates in PRs
 /bin
+
+.lh/
