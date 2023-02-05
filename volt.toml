@@ -1,17 +1,18 @@
-name = "<plugin-name>"
-version = "0.0.0"
-author = "<your name>"
-display-name = "<plugin-display-name>"
-description = "<plugin-description>"
-wasm = "bin/<plugin-name>.wasm"
+name = "lapce-powershell"
+version = "0.0.1"
+author = "instanceid"
+display-name = "PowerShell"
+description = "PowerShell language support for Lapce provided by PowerShell Editor Services"
+wasm = "bin/lapce-powershell.wasm"
+repository = "https://github.com/instance-id/lapce-powershell-plugin"
 
 [activation]
-language = []
-workspace-contains = []
+language = ["powershell"]
+workspace-contains = ["*/*.ps1", "*/*.psm1", "*/*.psd1", "*/PSScriptAnalyzerSettings.psd1"]
 
 [config."lsp.serverPath"]
 default = ""
-description = "Path to custom LSP executable"
+description = "Path to PowerShellEditorServices root folder. If not set, the extension will try to find it in the PATH."
 
 # [config."lsp.serverArgs"]
 # default = []
