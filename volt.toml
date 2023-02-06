@@ -4,7 +4,8 @@ author = "instanceid"
 display-name = "PowerShell"
 description = "PowerShell language support for Lapce provided by PowerShell Editor Services"
 wasm = "lapce-powershell.wasm"
-repository = "instance-id/lapce-powershell-plugin"
+icon = "pwsh-logo.png"
+repository = "https://github.com/instance-id/lapce-powershell-plugin"
 
 [activation]
 language = ["powershell"]

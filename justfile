@@ -17,18 +17,21 @@ install-nightly: build
     mkdir -p {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/bin
     yes | cp -i bin/{{plugin_name}}.wasm {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}
     yes | cp -i volt.toml {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/
+    yes | cp -i pwsh-logo.png {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/
 #    rm -rd {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/{{plugin_lsp}} || true
 
 install-stable: build
     mkdir -p {{xdg_data_dir}}/lapce-stable/{{plugin_dir}}/bin
     yes | cp -i bin/{{plugin_name}}.wasm {{xdg_data_dir}}/lapce-stable/{{plugin_dir}}
     yes | cp -i volt.toml {{xdg_data_dir}}/lapce-stable/{{plugin_dir}}/
+    yes | cp -i pwsh-logo.png {{xdg_data_dir}}/lapce-stable/{{plugin_dir}}/
 #    rm -rd {{xdg_data_dir}}/lapce-stable/{{plugin_dir}}/{{plugin_lsp}} || true
 
 install-dev: build-dev
     mkdir -p {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/bin
     yes | cp -i bin/{{plugin_name}}.wasm {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}
     yes | cp -i volt.toml {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/
+    yes | cp -i pwsh-logo.png {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/
 #    rm -rd {{xdg_data_dir}}/lapce-nightly/{{plugin_dir}}/{{plugin_lsp}} || true
 
 # behold a recipe

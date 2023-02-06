@@ -3,11 +3,12 @@ display-name = "lapce-powershell"
 description = "PowerShell language support for Lapce provided by PowerShell Editor Services"
 version = "0.0.1"
 author = "instanceid"
-repository = "instance-id/lapce-powershell-plugin"
-wasm = "lapce-powershell.wasm"
+icon = "pwsh-logo.png"
+repository = "https://github.com/instance-id/lapce-powershell-plugin"
 
 [configuration]
 language_id = "powershell"
+
 #[configuration.options.diagnostics]
 #enable = false
 #enableExperimental = false
