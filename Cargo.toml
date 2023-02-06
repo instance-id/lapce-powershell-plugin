@@ -2,7 +2,7 @@
 edition = "2021"
 name = "lapce-powershell"
 version = "0.0.1"
-resolver = "2"
+# resolver = "2"
 
 [target.'cfg(target_os = "wasi")'.dependencies]
 zip = { version = "0.6", default-features = false, features = ["deflate"] }
@@ -11,13 +11,11 @@ anyhow = "1.0"
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 lapce-plugin = { path = "../lapce-plugin-rust" }
-# lapce-plugin = { git = "https://github.com/lapce/lapce-plugin-rust.git" }
-# lapce-plugin = { git = "https://github.com/panekj/lapce-plugin-rust.git", branch = "volt" }
-# /mnt/x/GitHub/lapce/lapce-plugin-rust
+#lapce-plugin = "0.1.1"
 
-[profile.release]
-opt-level = 3
-lto = true
-codegen-units = 1
-strip = true
-panic = "abort"
+ [profile.release]
+ opt-level = 3
+ lto = true
+ codegen-units = 1
+ strip = true
+ panic = "abort"

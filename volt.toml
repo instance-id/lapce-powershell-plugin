@@ -3,12 +3,17 @@ version = "0.0.1"
 author = "instanceid"
 display-name = "PowerShell"
 description = "PowerShell language support for Lapce provided by PowerShell Editor Services"
-wasm = "bin/lapce-powershell.wasm"
-repository = "https://github.com/instance-id/lapce-powershell-plugin"
+wasm = "lapce-powershell.wasm"
+repository = "instance-id/lapce-powershell-plugin"
 
 [activation]
 language = ["powershell"]
-workspace-contains = ["*/*.ps1", "*/*.psm1", "*/*.psd1", "*/PSScriptAnalyzerSettings.psd1"]
+workspace-contains = [
+    "*/*.ps1",
+    "*/*.psm1",
+    "*/*.psd1",
+    "*/PSScriptAnalyzerSettings.psd1",
+]
 
 [config."lsp.serverPath"]
 default = ""
