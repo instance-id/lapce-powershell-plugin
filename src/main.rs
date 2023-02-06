@@ -107,7 +107,7 @@ fn initialize(params: InitializeParams) -> Result<()> {
     // --|-------------------------------------------------
     std::env::set_var(
         "PSES_BUNDLE_PATH",
-        format!("{plugin_path}/PowerShellEditorServices/"),
+        format!("{plugin_path}PowerShellEditorServices"),
     );
     std::env::set_var("SESSION_TEMP_PATH", plugin_path);
 
@@ -202,14 +202,14 @@ fn initialize(params: InitializeParams) -> Result<()> {
     // }
     // download_lsp().expect("Failed to download PowerShell Editor Services");
 
-    PLUGIN_RPC.stderr(&format!("{server_uri}"));
+    PLUGIN_RPC.stderr(&format!("server_uri: {server_uri}"));
     PLUGIN_RPC.stderr(&format!(
         "PSES_BUNDLE_PATH: {} SESSION_TEMP_PATH: {}",
         std::env::var("PSES_BUNDLE_PATH").unwrap(),
         std::env::var("SESSION_TEMP_PATH").unwrap()
     ));
-    PLUGIN_RPC.stderr(&format!("{server_args:?}"));
-    PLUGIN_RPC.stderr(&format!("{:?}", params.initialization_options));
+    PLUGIN_RPC.stderr(&format!("Args: {server_args:?}"));
+    PLUGIN_RPC.stderr(&format!("Options: {:?}", params.initialization_options));
 
     PLUGIN_RPC.start_lsp(
         server_uri,
